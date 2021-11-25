@@ -1,0 +1,151 @@
+#include <iostream>
+#include <windows.h>
+#include <ctime>
+#include <stdlib.h>
+using namespace std;
+
+enum Menu {Rules, Settings, Play, ExitProgramm};
+void getRulesVoid() /*Функция выводит правила игры*/
+{
+	system("cls");
+	cout << "[ + ] Правила игры:\nИгроки по очереди ставят на свободные клетки поля 3x3 знаки (один всегда крестики, другой всегда нолики). Первый, выстроивший в ряд 3 своих фигуры по вертикали, горизонтали или диагонали, выигрывает. Первый ход делает игрок, ставящий крестики.";
+	cout << "\nОбычно по завершении партии выигравшая сторона зачёркивает чертой свои три знака(нолика или крестика), составляющих сплошной ряд." << endl;
+
+
+
+	cout << "\n\n";
+}
+void getColorPaletteVoid() /*выводит палтру цветов*/
+{
+	cout << "0 = черный" << endl;
+	cout << "1 = синий" << endl;
+	cout << "2 = зеленый" << endl;
+	cout << "3 = голубой" << endl;
+	cout << "4 = красный" << endl;
+	cout << "5 = лиловый" << endl;
+	cout << "6 = желтый" << endl;
+	cout << "7 = белый" << endl;
+	cout << "8 = серый" << endl;
+	cout << "9 = светло - синий" << endl;
+	cout << "a = светло - зеленый" << endl;
+	cout << "b = светло - голубой" << endl;
+	cout << "c = светло - красный" << endl;
+	cout << "d = светло - лиловый" << endl;
+	cout << "e = светло - желтый" << endl;
+	cout << "f = ярко - белый" << endl;
+}
+void startGamePlayerVsComputerVoid()
+{
+	srand(time(NULL));
+	char gamingField[3][3] = {{ '|', '|','|'}, {'|', '|','|'}, {'|','|','|'}};
+	//               x  y
+	bool playerWin = false, computerWin = false, noWin = false;
+	int numOfMoves = 0;
+	int x, y;
+	do
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			for (int j = 0; j < 3; j++)
+			{
+				cout << gamingField[i][j];
+			}
+			cout << "\n";
+		}
+
+		cout << "Введите позицию:";
+		cin >> x >> y;
+		gamingField[x - 1][y - 1] = 'x';
+		numOfMoves++;
+		do
+		{
+			x = rand() % 3;
+			y = rand() % 3;
+
+		} while (gamingField[x][y] != '|');
+		gamingField[x][y] = 'o';
+
+		if ((gamingField[0][0] == 'x' && gamingField[0][1] == 'x' && gamingField[0][2] == 'x') 
+			(gamingField[1][0] == 'x' && gamingField[1][1] == 'x' && gamingField[1][2] == 'x') 
+			(gamingField[2][0] == 'x' && gamingField[2][1] == 'x' && gamingField[2][2] == 'x') 
+
+			(gamingField[0][0] == 'x' && gamingField[1][0] == 'x' && gamingField[2][0] == 'x') 
+			(gamingField[0][1] == 'x' && gamingField[1][1] == 'x' && gamingField[2][1] == 'x') 
+			(gamingField[0][2] == 'x' && gamingField[1][2] == 'x' && gamingField[2][2] == 'x') 
+
+			(gamingField[0][0] == 'x' && gamingField[1][1] == 'x' && gamingField[2][2] == 'x') 
+			(gamingField[0][2] == 'x' && gamingField[1][1] == 'x' && gamingField[2][0] == 'x'))
+		{
+			playerWin = true;
+		}
+		if ((gamingField[0][0] == 'o' && gamingField[0][1] == 'o' && gamingField[0][2] == 'o') 
+			(gamingField[1][0] == 'o' && gamingField[1][1] == 'o' && gamingField[1][2] == 'o') 
+			(gamingField[2][0] == 'o' && gamingField[2][1] == 'o' && gamingField[2][2] == 'o') 
+
+			(gamingField[0][0] == 'o' && gamingField[1][0] == 'o' && gamingField[2][0] == 'o') 
+			(gamingField[0][1] == 'o' && gamingField[1][1] == 'o' && gamingField[2][1] == 'o')  
+			(gamingField[0][2] == 'o' && gamingField[1][2] == 'o' && gamingField[2][2] == 'o') 
+
+			(gamingField[0][0] == 'o' && gamingField[1][1] == 'o' && gamingField[2][2] == 'o')  
+			(gamingField[0][2] == 'o' && gamingField[1][1] == 'o' && gamingField[2][0] == 'o'))
+			if (playerWin == false && computerWin == false && numOfMoves == 9)
+		
+		system("cls");
+	} while (playerWin == true && computerWin == true && noWin == true );
+}
+
+int main()
+{
+	setlocale(LC_ALL, "ru");
+
+	cout << "[ + ] Программа-игра \"Крестики нолики\"\n\n";
+	Menu action = Rules;
+	int mainAction = action; /*переменная для основного свича*/
+	bool exit = true;
+
+	while (exit)
+	{
+		cout << "[0] Правила\n[1] Настройки\n[2] Играть\n[3] Выход\n\n[-] Введите выбор:";
+		cin >> mainAction;
+
+		switch (mainAction)
+		{
+
+		case (Rules):
+		{
+			getRulesVoid();
+		}
+		break;
+
+		case (Settings):
+		{
+
+		}
+		break;
+
+		case (Play):
+		{
+		startGamePlayerVsComputerVoid();
+		}
+		break;
+
+		case (ExitProgramm):
+		{
+			return 0;
+		}
+		default:
+		{
+			cout << "Вы выбрали несуществующий пункт!\n\n";
+		}
+		cout << "Если вы хотите выйти,то нажмите [0]";
+		cout << "Если хотите продолжить,то нажмите [1]";
+		cin >> exit;
+
+
+		}
+
+	}
+
+	int _; cin >> _;
+	return 0;
+}
