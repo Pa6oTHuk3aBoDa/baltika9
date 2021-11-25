@@ -1,0 +1,77 @@
+#include <iostream>
+using namespace std;
+
+void main() {
+	setlocale(LC_ALL, "ru");
+
+	short figure, line,lenghtLine, i = 0;
+	char textureLine;
+
+	cout << "[+] Программа <Геометрические фигуры>\n\n\n";
+	cout << "[1] Линия\n\n[2] Квадрат\n[+] Выберите фигуру:";
+	cin >> figure;
+
+	switch (figure) {
+	case 1:
+		system("cls");
+		cout << "[+] Фигура: <Линия>\n\n[+]Выберите тип:\n[1] Горизонтальная\n[2] Вертикальная\n\n[+] Выберите тип:";
+		cin >> line;
+
+		switch (line) {
+		case 1:
+			system("cls");
+			cout << "Вы выбрали горизонтальную линию\n\n[+] Длина линии:";
+			cin >> lenghtLine;
+
+			cout << "\n[+] Текстура линии:";
+			cin >> textureLine;
+			cout << "[+] Результат:\n";
+			while (i < lenghtLine)
+			{
+				cout << textureLine;
+				i++;
+			}
+			break;
+		case 2:
+		{
+			system("cls");
+			cout << "Вы выбрали вертикальную линию\n\n[+] Длина линии:";
+			cin >> lenghtLine;
+
+			cout << "\n[+] Текстура линии:";
+			cin >> textureLine;
+			cout << "[+] Результат:\n";
+			while (i < lenghtLine)
+			{
+				cout << textureLine << endl;
+				i++;
+			}
+			break;
+		}
+		default:
+			break;
+		}
+		break;
+	default: cout << "Вы выбрали неверный тип фигуры, попробуйсте еще раз" << endl;
+		break;
+	case 2: {
+		system("cls");
+		  cout << "[+] Квадрат\n\n";
+		  cout << "[+] Размер: " << endl;
+		  cin >> lenghtLine;
+		  cout << "[+] Текстура: ";
+		  char texture;
+		  cin >> texture;
+		  for (int x = 0; x < lenghtLine; x++) {
+			  for (int y = 0 ; y < lenghtLine; y++) {
+				  cout << texture << " ";
+			  }
+			  cout << "\n";
+		  }
+		  break;
+}
+	}
+
+	int _; cin >> _;
+
+}
