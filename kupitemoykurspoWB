@@ -1,0 +1,110 @@
+#include <iostream>
+#include <cmath> 
+#include <Windows.h>
+
+
+
+
+using namespace std;
+void game() {
+	setlocale(0, "");
+	const int N = 3;
+	int x, y, k, vopper;
+	char xo[N][N], c, z;
+	string s, a, b, nik1, nik2;
+	a = "нолик";
+	b = "крестик";
+	z = '0';
+	c = 'X';
+	cout << "Игра:" << endl;
+	cout << "Имя первого игрока: ";
+	cin >> nik1;
+	cout << "Имя второго игрока: ";
+	cin >> nik2;
+	cout << "Чем ходит первый игрок?" << endl;
+	cout << "[1]-0" << endl;
+	cout << "[2]-X" << endl;
+	cout << "Число: ";
+	cin >> vopper;
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < N; j++)
+		{
+			xo[i][j] = '-';
+			cout << xo[i][j] << " ";
+		}
+		cout << endl;
+	}
+	for (int i = 0; i < 9; i++)
+	{
+		if ((!(i % 2)) && (vopper == 1)) s = a;
+		if ((!(i % 2)) && (vopper == 2)) s = b;
+		if ((i % 2) && (vopper == 1)) s = b;
+		if ((i % 2) && (vopper == 2)) s = a;
+	FSD:
+		cout << "Ваш ход (" << s << ")" << endl;
+		cout << "Строка: ";
+		cin >> x;
+		cout << "Столбец: ";
+		cin >> y;
+		x--;
+		y--;
+		if (xo[x][y] != '-')
+		{
+			system("cls");
+			for (int i = 0; i < N; i++)
+			{
+				for (int j = 0; j < N; j++)
+				{
+					cout << xo[i][j] << " ";
+				}
+				cout << endl;
+			}
+			cout << "На этой точке уже стоит фишка..." << endl;
+			goto FSD;
+		}
+		if ((!(i % 2)) && (vopper == 1)) xo[x][y] = z;
+		if ((!(i % 2)) && (vopper == 2)) xo[x][y] = c;
+		if ((i % 2) && (vopper == 1)) xo[x][y] = c;
+		if ((i % 2) && (vopper == 2)) xo[x][y] = z;
+		system("cls");
+		k = 0;
+		for (int i = 0; i < N; i++)
+		{
+			for (int j = 0; j < N; j++)
+			{
+				cout << xo[i][j] << " ";
+			}
+			cout << endl;
+		}
+		if (((xo[0][0] == '0') && (xo[0][1] == '0') && (xo[0][2] == '0')) ||
+			((xo[1][0] == '0') && (xo[1][1] == '0') && (xo[1][2] == '0')) ||
+			((xo[2][0] == '0') && (xo[2][1] == '0') && (xo[2][2] == '0')) ||
+			((xo[0][0] == '0') && (xo[1][0] == '0') && (xo[2][0] == '0')) ||
+			((xo[0][1] == '0') && (xo[1][1] == '0') && (xo[2][1] == '0')) ||
+			((xo[0][2] == '0') && (xo[1][2] == '0') && (xo[2][2] == '0')) ||
+			((xo[0][0] == '0') && (xo[1][1] == '0') && (xo[2][2] == '0')) ||
+			((xo[2][0] == '0') && (xo[1][1] == '0') && (xo[0][2] == '0')) ||
+			((xo[0][0] == 'X') && (xo[0][1] == 'X') && (xo[0][2] == 'X')) ||
+			((xo[1][0] == 'X') && (xo[1][1] == 'X') && (xo[1][2] == 'X')) ||
+			((xo[2][0] == 'X') && (xo[2][1] == 'X') && (xo[2][2] == 'X')) ||
+			((xo[0][0] == 'X') && (xo[1][0] == 'X') && (xo[2][0] == 'X')) ||
+			((xo[0][1] == 'X') && (xo[1][1] == 'X') && (xo[2][1] == 'X')) ||
+			((xo[0][2] == 'X') && (xo[1][2] == 'X') && (xo[2][2] == 'X')) ||
+			((xo[0][0] == 'X') && (xo[1][1] == 'X') && (xo[2][2] == 'X')) ||
+			((xo[2][0] == 'X') && (xo[1][1] == 'X') && (xo[0][2] == 'X')))
+		{
+			k++;
+			cout << "GAME OVER" << endl;
+			if ((xo[x][y] == z) && (vopper == 1)) cout << nik1 << " Победа моя" << endl;
+			if ((xo[x][y] == c) && (vopper == 2)) cout << nik1 << " Победа моя" << endl;
+			if ((xo[x][y] == c) && (vopper == 1)) cout << nik2 << " Победа моя" << endl;
+			if ((xo[x][y] == z) && (vopper == 2)) cout << nik2 << " Победа моя" << endl;
+			break;
+		}
+	}
+	if (!(k)) cout << "Ничья" << endl;
+	system("pause");
+}
+
+
