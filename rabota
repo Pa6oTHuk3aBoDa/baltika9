@@ -1,0 +1,209 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+	setlocale(0, "");
+	//float 
+	float b1 = 1.1;
+	float b2 = 1.1;
+	float b3 = 1.1;
+	float b4 = 1.1;
+	float b5 = 1.1;
+	float b6 = 1.1;
+	float b7 = 1.1;
+	float b8 = 1.1;
+	float b9 = 1.1;
+	float b10 = 1.1;
+	
+	cout << "Тип данных float" << endl;
+	
+	cout << "[1] b1 = " << b1 << "| Размер:4байт" << endl;
+	cout << "[2] b2 = " << b2 << "| Размер:4байт" << endl;
+	cout << "[3] b3 = " << b3 << "| Размер:4байт" << endl;
+	cout << "[4] b4 = " << b4 << "| Размер:4байт" << endl;
+	cout << "[5] b5 = " << b5 << "| Размер:4байт" << endl;
+	cout << "[6] b6 = " << b6 << "| Размер:4байт" << endl;
+	cout << "[7] b7 = " << b7 << "| Размер:4байт" << endl;
+	cout << "[8] b8 = " << b8 << "| Размер:4байт" << endl;
+	cout << "[9] b9 = " << b9 << "| Размер:4байт" << endl;
+	cout << "[10] b10 = " << b10 << "| Размер:4байт" << endl;
+
+	//double
+	double a1 = 1.11;
+	double a2 = 1.12;
+	double a3 = 1.13;
+	double a4 = 1.14;
+	double a5 = 1.15;
+	double a6 = 1.16;
+	double a7 = 1.17;
+	double a8 = 1.18;
+	double a9 = 1.19;
+	double a10 = 1.21;
+	
+	cout << "Тип данных double" << endl;
+	
+	cout << "[1] a1 = " << a1 << "| Размер:8байт" << endl;
+	cout << "[2] a2 = " << a2 << "| Размер:8байт" << endl;
+	cout << "[3] a3 = " << a3 << "| Размер:8байт" << endl;
+	cout << "[4] a4 = " << a4 << "| Размер:8байт" << endl;
+	cout << "[5] a5 = " << a5 << "| Размер:8байт" << endl;
+	cout << "[6] a6 = " << a6 << "| Размер:8байт" << endl;
+	cout << "[7] a7 = " << a7 << "| Размер:8байт" << endl;
+	cout << "[8] a8 = " << a8 << "| Размер:8байт" << endl;
+	cout << "[9] a9 = " << a9 << "| Размер:8байт" << endl;
+	cout << "[10] a10 = " << a10 << "| Размер:8байт" << endl;
+
+	//int
+	int i1 = 10;
+	int i2 = 11;
+	int i3 = 12;
+	int i4 = 13;
+	int i5 = 14;
+	int i6 = 15;
+	int i7 = 16;
+	int i8 = 17;
+	int i9 = 18;
+	int i10 = 19;
+	
+	cout << "Тип данных int" << endl;
+
+	cout << "[1] i1 = " << i1 << "| Размер:4байт" << endl;
+	cout << "[2] i2 = " << i2 << "| Размер:4байт" << endl;
+	cout << "[3] i3 = " << i3 << "| Размер:4байт" << endl;
+	cout << "[4] i4 = " << i4 << "| Размер:4байт" << endl;
+	cout << "[5] i5 = " << i5 << "| Размер:4байт" << endl;
+	cout << "[6] i6 = " << i6 << "| Размер:4байт" << endl;
+	cout << "[7] i7 = " << i7 << "| Размер:4байт" << endl;
+	cout << "[8] i8 = " << i8 << "| Размер:4байт" << endl;
+	cout << "[9] i9 = " << i9 << "| Размер:4байт" << endl;
+	cout << "[10] i10 = " << i10 << "| Размер:4байт" << endl;
+
+
+	//short
+	short s1 = 1;
+	short s2 = 2;
+	short s3 = 3;
+	short s4 = 4;
+	short s5 = 5;
+	short s6 = 6;
+	short s7 = 7;
+	short s8 = 8;
+	short s9 = 9;
+	short s10 = 10;
+	
+	cout << "Тип данных short" << endl;
+
+	cout << "[1] s1 = " << s1 << "| Размер:2байт" << endl;
+	cout << "[2] s2 = " << s2 << "| Размер:2байт" << endl;
+	cout << "[3] s3 = " << s3 << "| Размер:2байт" << endl;
+	cout << "[4] s4 = " << s4 << "| Размер:2байт" << endl;
+	cout << "[5] s5 = " << s5 << "| Размер:2байт" << endl;
+	cout << "[6] s6 = " << s6 << "| Размер:2байт" << endl;
+	cout << "[7] s7 = " << s7 << "| Размер:2байт" << endl;
+	cout << "[8] s8 = " << s8 << "| Размер:2байт" << endl;
+	cout << "[9] s9 = " << s9 << "| Размер:2байт" << endl;
+	cout << "[10] s10 = " << s10 << "| Размер:2байт" << endl;
+
+
+	//long
+	long l1 = 1;
+	long l2 = 2;
+	long l3 = 3;
+	long l4 = 4;
+	long l5 = 5;
+	long l6 = 6;
+	long l7 = 7;
+	long l8 = 8;
+	long l9 = 9;
+	long l10 = 10;
+	
+	cout << "Тип данных long" << endl;
+
+	cout << "[1] l1 = " << l1 << "| Размер:4байт" << endl;
+	cout << "[2] l2 = " << l2 << "| Размер:4байт" << endl;
+	cout << "[3] l3 = " << l3 << "| Размер:4байт" << endl;
+	cout << "[4] l4 = " << l4 << "| Размер:4байт" << endl;
+	cout << "[5] l5 = " << l5 << "| Размер:4байт" << endl;
+	cout << "[6] l6 = " << l6 << "| Размер:4байт" << endl;
+	cout << "[7] l7 = " << l7 << "| Размер:4байт" << endl;
+	cout << "[8] l8 = " << l8 << "| Размер:4байт" << endl;
+	cout << "[9] l9 = " << l9 << "| Размер:4байт" << endl;
+	cout << "[10] l10 = " << l10 << "| Размер:4байт" << endl;
+	
+
+	//char
+	char c1 = '1';
+	char c2 = '2';
+	char c3 = '3';
+	char c4 = '4';
+	char c5 = '5';
+	char c6 = '6';
+	char c7 = '7';
+	char c8 = '8';
+	char c9 = '9';
+	char c10 = '10';
+	
+	cout << "Тип данных char" << endl;
+	
+	cout << "[1] c1 = " << c1 << "| Размер:1байт" << endl;
+	cout << "[2] c2 = " << c2 << "| Размер:1байт" << endl;
+	cout << "[3] c3 = " << c3 << "| Размер:1байт" << endl;
+	cout << "[4] c4 = " << c4 << "| Размер:1байт" << endl;
+	cout << "[5] c5 = " << c5 << "| Размер:1байт" << endl;
+	cout << "[6] c6 = " << c6 << "| Размер:1байт" << endl;
+	cout << "[7] c7 = " << c7 << "| Размер:1байт" << endl;
+	cout << "[8] c8 = " << c8 << "| Размер:1байт" << endl;
+	cout << "[9] c9 = " << c9 << "| Размер:1байт" << endl;
+	cout << "[10] c10 = " << c10 << "| Размер:1байт" << endl;
+
+	//bool
+	bool x1 = false;
+	bool x2 = true;
+	bool x3 = false;
+	bool x4 = true;
+	bool x5 = false;
+	bool x6 = true;
+	bool x7 = false;
+	bool x8 = true;
+	bool x9 = false;
+	bool x10 = true;
+	
+	cout << "Тип данных bool" << endl;
+	
+	cout << "[1] x1 = " << x1 << "| Размер:1байт" << endl;
+	cout << "[2] x2 = " << x2 << "| Размер:1байт" << endl;
+	cout << "[3] x3 = " << x3 << "| Размер:1байт" << endl;
+	cout << "[4] x4 = " << x4 << "| Размер:1байт" << endl;
+	cout << "[5] x5 = " << x5 << "| Размер:1байт" << endl;
+	cout << "[6] x6 = " << x6 << "| Размер:1байт" << endl;
+	cout << "[7] x7 = " << x7 << "| Размер:1байт" << endl;
+	cout << "[8] x8 = " << x8 << "| Размер:1байт" << endl;
+	cout << "[9] x9 = " << x9 << "| Размер:1байт" << endl;
+	cout << "[10] x10 = " << x10 << "| Размер:1байт" << endl;
+
+
+	//string
+	string g1 = "Идет ";
+	string g2 = "мужик по лесу ";
+	string g3 = "видит дом стоит ";
+	string g4 = "заходит в дом  ";
+	string g5 = "а там мужик с открытым зонтом стоит ";
+	string g6 = "ну он у него спрашивает ";
+	string g7 = "мужик ты чего с зонтом стоишь, дождя боишься испугаться? ";
+	string g8 = "а он ему отвечает ";
+	string g9 = "нет, не боюсь, я же с зонтом ";
+	string g10 = "смешной анекдот:) ";
+	
+	cout << "Тип данных string" << endl;
+	
+	cout << "[1] g1 = " << x1  << endl;
+	cout << "[2] g2 = " << x2  << endl;
+	cout << "[3] g3 = " << x3  << endl;
+	cout << "[4] g4 = " << x4  << endl;
+	cout << "[5] g5 = " << x5  << endl;
+	cout << "[6] g6 = " << x6  << endl;
+	cout << "[7] g7 = " << x7  << endl;
+	cout << "[8] g8 = " << x8  << endl;
+	cout << "[9] g9 = " << x9  << endl;
+	cout << "[10] 10 = " << x10 << endl;
+}
