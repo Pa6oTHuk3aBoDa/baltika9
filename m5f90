@@ -1,0 +1,99 @@
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	cout << "[+] Программа - \"Геометрические фигуры\"\n[1] Квадрат\n [2]Прямоугольник\n[+] Выберите фигуру: ";
+	int x;
+	cin >> x;
+	system("cls");
+
+	if (x == 1) 
+	 {
+		cout << "[1] Пустой\n[2] Заполненный\n[+] Ввод: ";
+		int size;
+		cin >> size;
+		if (size == 1) {
+			cout << "Знак: ";
+			char bobs;
+			cin >> bobs;
+			cout << "Размер: ";
+			cin >> size;
+			for (int i = 0; i < size; i++) {
+				for (int i2 = 0; i2 < size * 2 - 2; i2++)
+					if (i == 0 || i == size - 1 || i2 == 0 || i2 == size * 2 - 3) {
+						cout << bobs;
+					}
+					else {
+						cout << " ";
+					}
+				cout << endl;
+			}
+		}
+		else if (size == 2) {
+			cout << "Знак: ";
+			char bobs;
+			cin >> bobs;
+			cout << "Размер: ";
+			cin >> size;
+			for (int i = 0; i < size; i++) {
+				for (int i = 0; i < size * 2 - 2; i++)
+					cout << bobs;
+				cout << endl;
+			}
+		}
+		else {
+			cout << "Такого фигры нет.";
+		}
+
+
+	}
+	else if (x == 2) {
+		cout << "[1] Пустой\n[2] Заполненный\n[+] Ввод: ";
+		int size;
+		cin >> size;
+		if (size == 1) {
+			cout << "Знак: ";
+			char bobs;
+			cin >> bobs;
+			cout << "Длина: ";
+			cin >> size;
+			cout << "Ширина: ";
+			int size2;
+			cin >> size2;
+			for (int i = 0; i < size; i++) {
+				for (int i2 = 0; i2 < size2 * 2 - 2; i2++)
+					if (i == 0 || i == size - 1 || i2 == 0 || i2 == size2 * 2 - 3) {
+						cout << bobs;
+					}
+					else {
+						cout << " ";
+					}
+				cout << endl;
+			}
+		}
+		else if (size == 2) {
+			cout << "Знак: ";
+			char bobs;
+			cin >> bobs;
+			cout << "Длина: ";
+			cin >> size;
+			cout << "Ширина: ";
+			int size2;
+			cin >> size2;
+			for (int i = 0; i < size; i++) {
+				for (int i = 0; i < size2 * 2 - 2; i++)
+					cout << bobs;
+				cout << endl;
+			}
+		}
+		else {
+			cout << "Такой фигуры нет.";
+		}
+	}
+	return 0;
+
+	
+}
